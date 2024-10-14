@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width:max-content;
+    max-width: 20rem;
+}
+button{
+    background-color: red;
+    color:white;
+    width: max-content;
+    height:max-content;
+}
+p{
+    font-size: medium;
+}

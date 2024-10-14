@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Quiz Generator",
+    "version": "1.0.0",
+    "description": "Generate quizzes based on YouTube video content.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "https://www.youtube.com/*",
+      "http://127.0.0.1:5000/*" 
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+      
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ]
+    
+    
+}
