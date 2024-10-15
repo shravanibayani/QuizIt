@@ -1,40 +1,25 @@
 from flask import Flask, request
-from youtube_transcript_api import YouTubeTranscriptApi
+from helpers import get_transcript, quiz_generator
 
 app = Flask(__name__)
 
-@app.route('/')
-def app_home():
-    return "Welcome to the home page"
-
 @app.route('/getquiz', methods=['GET'])
 def get_quiz():
-    video_id = id_generator()  
-    transcript = get_transcript(video_id)  
-    return transcript
-
-def id_generator():
-    url = request.args.get('url')  
-    print("YouTube URL received:", url)
-    vd1 = url.split('=')[1]
-    video_id = vd1.split('&')[0]  
-    return video_id
-
-from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound
-
-def get_transcript(video_id):
-    try:
-        transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
-    except NoTranscriptFound:
-        try:
-            transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=['en-IN', 'hi'])
-        except NoTranscriptFound as e:
-            print(f"No transcript found for the video: {e}")
-            return "No transcript available."
-
-    transcript = " ".join([d['text'] for d in transcript_list])
-    return transcript
-
+    url = request.args.get('url')
+    transcript = get_transcript(url)  
+    quiz = quiz_generator(transcript)
+    if quiz:
+        return quiz
+    else:
+        return 'Could not generate the quiz :('
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
+
+'''
+To do 
+- need to check the category of the video before generaing the quiz
+- only generate the quiz for education category videos which are in english language
+- we also need to do the error handling better
+'''
