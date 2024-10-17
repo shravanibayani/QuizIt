@@ -1,17 +1,120 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
-    width:max-content;
-    max-width: 20rem;
+
+body {
+    width: 20rem;
+    padding: 2rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-button{
-    background-color: red;
-    color:white;
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+#btn_quiz {
+    background-color: #6066D0;
+    color: white;
     width: max-content;
-    height:max-content;
+    height: max-content;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0 0 0; 
 }
-p{
+#next{
+    background-color: #6066D0;
+    color: white;
+    width: max-content;
+    height: max-content;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0 0 0; 
+}
+#scorecard{
+    background-color: #6066D0;
+    color: white;
+    width: max-content;
+    height: max-content;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0 0 0; 
+}
+
+p {
     font-size: medium;
+}
+
+.question_text{
+    align-self: flex-start;
+    font-size: 1rem;
+}
+
+.question{
+    margin:1rem;
+    font-size: 1.1rem;
+}
+.option{
+    margin:0.5rem;
+    padding:0.5rem 1rem;
+    border-radius: 0.5rem;
+    border:solid #6066D0 0.1rem;
+    text-align: center;
+    cursor: pointer;
+}
+.option:hover{
+    background-color: #6066D0;
+    color: white;
+}
+.option.correct_ans {
+    background-color: #4CAF50; 
+    color: white; 
+    pointer-events: none; 
+}
+
+.option.wrong_ans {
+    background-color: #f44336; 
+    color: white; 
+    pointer-events: none; 
+}
+.option.correct_ans:hover{
+    background-color: #4CAF50; 
+    color: white; 
+    pointer-events: none;
+}
+.option.wrong_ans:hover {
+    background-color: #f44336; 
+    color: white; 
+    pointer-events: none; 
+}
+.bigText{
+    font-size:1.5rem;
+}
+.biggestText{
+    font-size: 2.3rem;
+}
+.score{
+    background-color: #6066D0;
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0 0 0; 
+}
+#loadVideo{
+    margin: 2rem 0 0 0;
+    width:9rem;
+    height:auto;
+}
+.wish{
+    color:#6066D0;
+    margin:2rem 0 1rem 0;
+    font-size: 1.2rem;
 }
