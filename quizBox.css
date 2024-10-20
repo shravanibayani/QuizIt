@@ -117,12 +117,12 @@ button {
     pointer-events: none; 
 }
 .option_quiz.correct_ans:hover{
-    background-color: #4CAF50; 
+    background-color: #419343; 
     color: white; 
     pointer-events: none;
 }
 .option_quiz.wrong_ans:hover {
-    background-color: #f44336; 
+    background-color: #e74034; 
     color: white; 
     pointer-events: none; 
 }
