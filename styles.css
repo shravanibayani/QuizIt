@@ -18,7 +18,7 @@ button {
     cursor: pointer;
 }
 
-#btn_quiz {
+#generateQuiz {
     background-color: #6066D0;
     color: white;
     width: max-content;
@@ -28,93 +28,49 @@ button {
     border-radius: 0.3rem;
     margin: 1rem 0 0 0; 
 }
-#next{
-    background-color: #6066D0;
-    color: white;
-    width: max-content;
-    height: max-content;
-    padding: 0.7rem 2rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    margin: 1rem 0 0 0; 
-}
-#scorecard{
-    background-color: #6066D0;
-    color: white;
-    width: max-content;
-    height: max-content;
-    padding: 0.7rem 2rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    margin: 1rem 0 0 0; 
-}
+
 
 p {
     font-size: medium;
 }
 
-.question_text{
-    align-self: flex-start;
-    font-size: 1rem;
-}
 
-.question{
-    margin:1rem;
-    font-size: 1.1rem;
-}
-.option{
-    margin:0.5rem;
-    padding:0.5rem 1rem;
-    border-radius: 0.5rem;
-    border:solid #6066D0 0.1rem;
-    text-align: center;
-    cursor: pointer;
-}
-.option:hover{
+/* .generating{
     background-color: #6066D0;
     color: white;
-}
-.option.correct_ans {
-    background-color: #4CAF50; 
-    color: white; 
-    pointer-events: none; 
-}
-
-.option.wrong_ans {
-    background-color: #f44336; 
-    color: white; 
-    pointer-events: none; 
-}
-.option.correct_ans:hover{
-    background-color: #4CAF50; 
-    color: white; 
-    pointer-events: none;
-}
-.option.wrong_ans:hover {
-    background-color: #f44336; 
-    color: white; 
-    pointer-events: none; 
-}
-.bigText{
-    font-size:1.5rem;
-}
-.biggestText{
-    font-size: 2.3rem;
-}
-.score{
-    background-color: #6066D0;
-    color: white;
+    width: max-content;
+    height: max-content;
     padding: 0.7rem 2rem;
-    border-radius: 0.3rem;
+    font-size: 2rem;
+    border-radius: 3rem;
     margin: 1rem 0 0 0; 
+} */
+/* #loadVideo{
+    width:10rem;
+    height:15rem;
+} */
+
+
+/* .quizbox{
+    position: fixed;
+    width:40rem;
+    height: 50rem;
+    background-color: white;
+    top: 20%;
+    right: 2%;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
 }
-#loadVideo{
-    margin: 2rem 0 0 0;
-    width:9rem;
-    height:auto;
-}
-.wish{
-    color:#6066D0;
-    margin:2rem 0 1rem 0;
-    font-size: 1.2rem;
-}
+.close{
+    position: absolute;
+    right: 1rem; 
+    top: 1rem; 
+    font-size: 2rem;
+    padding: 0.5rem; 
+    border: none; 
+    background-color: transparent; 
+    cursor: pointer; 
+} */
